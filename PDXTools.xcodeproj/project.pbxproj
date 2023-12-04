@@ -22,6 +22,7 @@
 		C4C01F082B1DADE2000A6B60 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C01F072B1DADE1000A6B60 /* Data.swift */; };
 		C4C01F0A2B1DAE45000A6B60 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C01F092B1DAE44000A6B60 /* Date.swift */; };
 		C4C01F0C2B1DB062000A6B60 /* PDXTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C4C01F0B2B1DB062000A6B60 /* PDXTools.podspec */; };
+		C4C01F102B1DBB59000A6B60 /* DXThirdLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C01F0F2B1DBB59000A6B60 /* DXThirdLoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C4C01F072B1DADE1000A6B60 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C4C01F092B1DAE44000A6B60 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C4C01F0B2B1DB062000A6B60 /* PDXTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDXTools.podspec; sourceTree = SOURCE_ROOT; };
+		C4C01F0F2B1DBB59000A6B60 /* DXThirdLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DXThirdLoginManager.swift; sourceTree = "<group>"; };
 		D42B1D33AD16F8D98E7EA5B9 /* Pods-PDXTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXTools.release.xcconfig"; path = "Target Support Files/Pods-PDXTools/Pods-PDXTools.release.xcconfig"; sourceTree = "<group>"; };
 		F8F4EA647C436860CC39445C /* Pods-PDXTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXTools.debug.xcconfig"; path = "Target Support Files/Pods-PDXTools/Pods-PDXTools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 		C4C01F0D2B1DB751000A6B60 /* ThirdLogin */ = {
 			isa = PBXGroup;
 			children = (
+				C4C01F0F2B1DBB59000A6B60 /* DXThirdLoginManager.swift */,
 			);
 			path = ThirdLogin;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				C4C01ED62B1DADA2000A6B60 /* AppDelegate.swift in Sources */,
 				C4C01ED82B1DADA2000A6B60 /* SceneDelegate.swift in Sources */,
 				C4C01F082B1DADE2000A6B60 /* Data.swift in Sources */,
+				C4C01F102B1DBB59000A6B60 /* DXThirdLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

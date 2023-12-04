@@ -11,8 +11,10 @@ Pod::Spec.new do |spec|
   
     spec.subspec 'ThirdLogin' do |subspec|
         subspec.name = 'ThirdLogin'
-        #subspec.dependency 'Dependency1'
+        subspec.dependency 'Weibo_SDK', :git => 'https://github.com/sinaweibosdk/weibo_ios_sdk.git'
+        subspec.dependency 'WechatOpenSDK-XCFramework', '~> 2.0.2'
+        subspec.dependency 'GoogleSignIn', '~> 7.0.0'
+        subspec.dependency 'FacebookLogin', '~> 0.9.0'
         subspec.source_files = 'PDXTools/Classes/ThirdLogin/*.swift'
-        # 其他配置项
     end
 end

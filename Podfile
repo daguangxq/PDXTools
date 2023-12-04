@@ -5,7 +5,10 @@ target 'PDXTools' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for PDXTools
+  pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+  pod 'GoogleSignIn'
+  pod 'FacebookLogin'
+  pod 'WechatOpenSDK-XCFramework'
 
   target 'PDXToolsTests' do
     inherit! :search_paths
