@@ -21,7 +21,7 @@ open class DXThirdLoginManager : NSObject {
     private let wxSecret = ""
     
     // 平台
-    open enum ThirdType : String {
+    public enum ThirdType : String {
         case weibo = "weibo"
         case Wechat = "Wechat"
         case facebook = "facebook"
@@ -31,8 +31,8 @@ open class DXThirdLoginManager : NSObject {
     private var loggingInType: ThirdType?
     
     // 异步回调的block
-    typealias LoginBlock = (_ token:String?,_ expirationDate:Date? ,_ openid:String?,_ thirdType:ThirdType) -> Void
-    typealias UserInfoBlock = (_ dict:Dictionary<String,Any>?) -> Void
+    public typealias LoginBlock = (_ token:String?,_ expirationDate:Date? ,_ openid:String?,_ thirdType:ThirdType) -> Void
+    public typealias UserInfoBlock = (_ dict:Dictionary<String,Any>?) -> Void
     private var loginBlock: LoginBlock?
     private var userInfoBlock: UserInfoBlock?
     
@@ -41,7 +41,7 @@ open class DXThirdLoginManager : NSObject {
     
     /// 注册平台，一般在Launch方法中
     /// - Parameter types: 平台集合
-    open func registThird(_ types:[ThirdType] ) {
+    public func registThird(_ types:[ThirdType] ) {
         types.forEach { type in
             switch type {
             case .weibo:
@@ -61,7 +61,7 @@ open class DXThirdLoginManager : NSObject {
     /// - Parameters:
     ///   - url: 回调的url
     ///   - options: 参数
-    open func handOpenUrl(url:URL,options: [UIApplication.OpenURLOptionsKey : Any]) {
+    public func handOpenUrl(url:URL,options: [UIApplication.OpenURLOptionsKey : Any]) {
         registTypes.forEach { thirdType in
             switch thirdType {
             case .weibo:
@@ -82,7 +82,7 @@ open class DXThirdLoginManager : NSObject {
     ///   - viewController: 当前页面
     ///   - loginBlock: loginBlock 回调
     /// - Returns: 是否成功
-    open func loginThird(type:ThirdType,_ viewController:UIViewController,loginBlock:@escaping LoginBlock) ->Bool {
+    public func loginThird(type:ThirdType,_ viewController:UIViewController,loginBlock:@escaping LoginBlock) ->Bool {
         guard registTypes.contains(type) else {
             print(type.rawValue + ".未进行注册")
             return false
@@ -118,7 +118,7 @@ open class DXThirdLoginManager : NSObject {
     ///   - openid: openid,微信需要改参数
     ///   - userInfoBlock: userInfoBlock,回调
     /// - Returns: 是否成功发送请求
-    open func fetchLoginInfoRequest(type: ThirdType,token:String,openid:String?,userInfoBlock:@escaping UserInfoBlock) ->Bool {
+    public func fetchLoginInfoRequest(type: ThirdType,token:String,openid:String?,userInfoBlock:@escaping UserInfoBlock) ->Bool {
         self.userInfoBlock = userInfoBlock;
         self.loggingInType = type
         if type == .weibo {
@@ -188,12 +188,12 @@ extension DXThirdLoginManager : WeiboSDKDelegate,WBHttpRequestDelegate {
     }
     
     // WBHttpRequestDelegate - 失败
-    func request(_ request: WBHttpRequest!, didFailWithError error: Error!) {
+    public func request(_ request: WBHttpRequest!, didFailWithError error: Error!) {
         userInfoCompleted(nil)
     }
     
     // WBHttpRequestDelegate - 成功
-    func request(_ request: WBHttpRequest!, didFinishLoadingWithDataResult data: Data!) {
+    public func request(_ request: WBHttpRequest!, didFinishLoadingWithDataResult data: Data!) {
         
         if let jsonResult = data.toDictionary() {
             userInfoCompleted(jsonResult)
@@ -203,12 +203,12 @@ extension DXThirdLoginManager : WeiboSDKDelegate,WBHttpRequestDelegate {
     }
     
     // WeiboSDKDelegate --代理
-    func didReceiveWeiboRequest(_ request: WBBaseRequest?) {
+    public func didReceiveWeiboRequest(_ request: WBBaseRequest?) {
         // 请求方法，可以获取请求类型
     }
     
     // WeiboSDKDelegate --回调
-    func didReceiveWeiboResponse(_ response: WBBaseResponse?) {
+    public func didReceiveWeiboResponse(_ response: WBBaseResponse?) {
         if let authResp = response as? WBAuthorizeResponse {
             if authResp.statusCode == .success {
                 // 微博登录成功
@@ -244,7 +244,7 @@ extension DXThirdLoginManager : WXApiDelegate {
     }
     
     // WXApiDelegate - 处理微信登录结果
-    func onResp(_ resp: BaseResp) {
+    public func onResp(_ resp: BaseResp) {
         guard let authResp = resp as? SendAuthResp else {
             loginCompleted(nil, nil, nil)
             return

@@ -6,6 +6,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <WXApi.h>
-#import <WeiboSDK.h>
+
+#import "WeiboSDK.h"
