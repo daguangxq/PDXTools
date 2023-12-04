@@ -67,6 +67,7 @@
 		C4C01F092B1DAE44000A6B60 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C4C01F0B2B1DB062000A6B60 /* PDXTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDXTools.podspec; sourceTree = SOURCE_ROOT; };
 		C4C01F0F2B1DBB59000A6B60 /* DXThirdLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DXThirdLoginManager.swift; sourceTree = "<group>"; };
+		C4C01F112B1DBDBE000A6B60 /* PDXTools-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDXTools-Bridging-Header.h"; sourceTree = "<group>"; };
 		D42B1D33AD16F8D98E7EA5B9 /* Pods-PDXTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXTools.release.xcconfig"; path = "Target Support Files/Pods-PDXTools/Pods-PDXTools.release.xcconfig"; sourceTree = "<group>"; };
 		F8F4EA647C436860CC39445C /* Pods-PDXTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXTools.debug.xcconfig"; path = "Target Support Files/Pods-PDXTools/Pods-PDXTools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +157,7 @@
 				C4C01EDE2B1DADA3000A6B60 /* Assets.xcassets */,
 				C4C01EE02B1DADA3000A6B60 /* LaunchScreen.storyboard */,
 				C4C01EE32B1DADA3000A6B60 /* Info.plist */,
+				C4C01F112B1DBDBE000A6B60 /* PDXTools-Bridging-Header.h */,
 			);
 			path = PDXTools;
 			sourceTree = "<group>";
@@ -222,6 +224,8 @@
 				C4C01ECE2B1DADA2000A6B60 /* Sources */,
 				C4C01ECF2B1DADA2000A6B60 /* Frameworks */,
 				C4C01ED02B1DADA2000A6B60 /* Resources */,
+				CCB6846A366322A812BB8F94 /* [CP] Embed Pods Frameworks */,
+				2BDC167070B6EFB64383EE1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +263,8 @@
 				C4C01EEE2B1DADA3000A6B60 /* Sources */,
 				C4C01EEF2B1DADA3000A6B60 /* Frameworks */,
 				C4C01EF02B1DADA3000A6B60 /* Resources */,
+				BC1F82693CA29E259EA7E0B7 /* [CP] Embed Pods Frameworks */,
+				8B6F84A437B9649819439AAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,6 +350,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BDC167070B6EFB64383EE1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools/Pods-PDXTools-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools/Pods-PDXTools-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PDXTools/Pods-PDXTools-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2C4B9A308A691FA871D412BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +431,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B6F84A437B9649819439AAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools-PDXToolsUITests/Pods-PDXTools-PDXToolsUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools-PDXToolsUITests/Pods-PDXTools-PDXToolsUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PDXTools-PDXToolsUITests/Pods-PDXTools-PDXToolsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC1F82693CA29E259EA7E0B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools-PDXToolsUITests/Pods-PDXTools-PDXToolsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools-PDXToolsUITests/Pods-PDXTools-PDXToolsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PDXTools-PDXToolsUITests/Pods-PDXTools-PDXToolsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCB6846A366322A812BB8F94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools/Pods-PDXTools-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PDXTools/Pods-PDXTools-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PDXTools/Pods-PDXTools-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -616,6 +690,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daguang.PDXTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PDXTools/PDXTools-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,6 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daguang.PDXTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PDXTools/PDXTools-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
