@@ -8,11 +8,11 @@
 
 import Foundation
 
-extension Data {
+open extension Data {
     
     /// 将data转为对象
     /// - Returns: 被转对象
-    func toObject<T:Decodable>(type:T.Type) -> T? {
+    open func toObject<T:Decodable>(type:T.Type) -> T? {
         do {
             let decoder = JSONDecoder()
             let object = try decoder.decode(type , from: self)
@@ -25,14 +25,14 @@ extension Data {
     
     /// 将Data转为String
     /// - Returns: 被转后的字符串
-    func toString() -> String? {
+    open func toString() -> String? {
         return String(data: self, encoding: .utf8)
     }
     
     
     /// 转为字典
     /// - Returns:字典
-    func toDictionary() -> [String: Any]? {
+    open func toDictionary() -> [String: Any]? {
         do {
             if let dictionary = try JSONSerialization.jsonObject(with: self, options: []) as? [String: Any] {
                 return dictionary

@@ -10,7 +10,7 @@ import Foundation
 import FacebookLogin
 import GoogleSignIn
 
-class DXThirdLoginManager : NSObject {
+open class DXThirdLoginManager : NSObject {
     
     private let weiboApiKey = ""
     private let weiboRedirectURI = ""
@@ -21,7 +21,7 @@ class DXThirdLoginManager : NSObject {
     private let wxSecret = ""
     
     // 平台
-    enum ThirdType : String {
+    open enum ThirdType : String {
         case weibo = "weibo"
         case Wechat = "Wechat"
         case facebook = "facebook"
@@ -41,7 +41,7 @@ class DXThirdLoginManager : NSObject {
     
     /// 注册平台，一般在Launch方法中
     /// - Parameter types: 平台集合
-    func registThird(_ types:[ThirdType] ) {
+    open func registThird(_ types:[ThirdType] ) {
         types.forEach { type in
             switch type {
             case .weibo:
@@ -61,7 +61,7 @@ class DXThirdLoginManager : NSObject {
     /// - Parameters:
     ///   - url: 回调的url
     ///   - options: 参数
-    func handOpenUrl(url:URL,options: [UIApplication.OpenURLOptionsKey : Any]) {
+    open func handOpenUrl(url:URL,options: [UIApplication.OpenURLOptionsKey : Any]) {
         registTypes.forEach { thirdType in
             switch thirdType {
             case .weibo:
@@ -82,7 +82,7 @@ class DXThirdLoginManager : NSObject {
     ///   - viewController: 当前页面
     ///   - loginBlock: loginBlock 回调
     /// - Returns: 是否成功
-    func loginThird(type:ThirdType,_ viewController:UIViewController,loginBlock:@escaping LoginBlock) ->Bool {
+    open func loginThird(type:ThirdType,_ viewController:UIViewController,loginBlock:@escaping LoginBlock) ->Bool {
         guard registTypes.contains(type) else {
             print(type.rawValue + ".未进行注册")
             return false
@@ -118,7 +118,7 @@ class DXThirdLoginManager : NSObject {
     ///   - openid: openid,微信需要改参数
     ///   - userInfoBlock: userInfoBlock,回调
     /// - Returns: 是否成功发送请求
-    func fetchLoginInfoRequest(type: ThirdType,token:String,openid:String?,userInfoBlock:@escaping UserInfoBlock) ->Bool {
+    open func fetchLoginInfoRequest(type: ThirdType,token:String,openid:String?,userInfoBlock:@escaping UserInfoBlock) ->Bool {
         self.userInfoBlock = userInfoBlock;
         self.loggingInType = type
         if type == .weibo {

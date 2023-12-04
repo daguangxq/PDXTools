@@ -8,12 +8,12 @@
 
 import Foundation
 
-extension Date {
+open extension Date {
     
     /// 根据格式转时间
     /// - Parameter format: 格式
     /// - Returns: 字符串
-    func toString(_ format:String) -> String {
+    open func toString(_ format:String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -25,7 +25,7 @@ extension Date {
     ///   - customDate: 时间字符串
     ///   - customFormate: 时间格式
     /// - Returns: date
-    static func toDateFromCustom(dateString: String, _ format: String = "HH:mm") -> Date? {        
+    open static func toDateFromCustom(dateString: String, _ format: String = "HH:mm") -> Date? {
         // 创建一个 DateFormatter 实例，用于解析时间部分
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = format
@@ -38,7 +38,7 @@ extension Date {
     ///   - customDate: 时间字符串
     ///   - customFormate: 时间格式
     /// - Returns: date
-    static func toDateFromCustomOfCompletionMissing(dateString: String, _ format: String = "HH:mm") -> Date? {
+    open static func toDateFromCustomOfCompletionMissing(dateString: String, _ format: String = "HH:mm") -> Date? {
         // 获取当前日期和时间
         let currentDate = Date()
         
@@ -64,13 +64,13 @@ extension Date {
     
     /// 转为：yyyy-MM-dd 字符串
     /// - Returns: 字符串
-    func toShortString() -> String {
+    open func toShortString() -> String {
         return toString("yyyy-MM-dd")
     }
     
     /// 转为：yyyy-MM-dd HH:mm:ss 字符串
     /// - Returns: 字符串
-    func toLongString() -> String {
+    open func toLongString() -> String {
         return toString("yyyy-MM-dd HH:mm:ss")
     }
     
@@ -79,7 +79,7 @@ extension Date {
     ///   - seconds: 指定秒后,正数为未来时间，负数为历史时间
     ///   - formate: 返回格式
     /// - Returns: 字符串
-    func toTimeStringAfterSeconds(seconds: Int,_ formate:String = "yyyy-MM-dd HH:mm:ss") -> String {
+    open func toTimeStringAfterSeconds(seconds: Int,_ formate:String = "yyyy-MM-dd HH:mm:ss") -> String {
         let currentDate = Date()
         let calendar = Calendar.current
         let futureDate = calendar.date(byAdding: .second, value: seconds, to: currentDate)
@@ -99,7 +99,7 @@ extension Date {
     /// 获取seconds后的时间对象
     /// - Parameter seconds: add seconds
     /// - Returns: date
-    func toTimeAfterSeconds(seconds: Int) -> Date {
+    open func toTimeAfterSeconds(seconds: Int) -> Date {
         let currentDate = Date()
         let calendar = Calendar.current
         return calendar.date(byAdding: .second, value: seconds, to: currentDate) ?? Date()
@@ -108,7 +108,7 @@ extension Date {
     /// 获取开始时间。let start = Date().toStartDate([.year,.month]).toLongString()
     /// - Parameter components: 当年的开始时间，月的开始，日的开始时间
     /// - Returns: date
-    func toStartDate(_ components: Set<Calendar.Component>) -> Date {
+    open func toStartDate(_ components: Set<Calendar.Component>) -> Date {
         let calendar = Calendar.current
         let now = Date()
         let components = calendar.dateComponents([.year,.month], from: now)
