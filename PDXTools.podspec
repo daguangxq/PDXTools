@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = 'HueKit'
+  s.name = 'PDXTools'
   s.version = '1.0.1'
   s.license = 'MIT'
   s.summary = 'PDX 一些常用工具类，有问题咨询daguangxq@icloud.com'
