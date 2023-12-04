@@ -196,7 +196,7 @@ extension DXThirdLoginManager : WeiboSDKDelegate,WBHttpRequestDelegate {
     // WBHttpRequestDelegate - 成功
     func request(_ request: WBHttpRequest!, didFinishLoadingWithDataResult data: Data!) {
         
-        if let jsonResult = data as? [String: Any] {
+        if let jsonResult = data.toDictionary() {
             userInfoCompleted(jsonResult)
         }else{
             userInfoCompleted(nil)
