@@ -12,6 +12,7 @@ Pod::Spec.new do |spec|
     spec.subspec 'Core' do |subspec|
         subspec.name = 'Core'
         subspec.source_files = 'PDXTools/Classes/Core/**/*.swift'
+        subspec.public_header_files = 'PDXTools/Classes/Core/**/*.swift'
     end
     
     # 第三方登陆
@@ -21,6 +22,7 @@ Pod::Spec.new do |spec|
         subspec.dependency 'GoogleSignIn', '~> 7.0.0'
         subspec.dependency 'FacebookLogin', '~> 0.9.0'
         subspec.source_files = 'PDXTools/Classes/ThirdLogin/*.swift'
+        subspec.public_header_files = 'PDXTools/Classes/Core/**/*.swift'
     end
     
     spec.default_subspec = 'Core'

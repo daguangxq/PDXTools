@@ -9,7 +9,6 @@ import Foundation
 
 import FacebookLogin
 import GoogleSignIn
-import PDXTools
 
 class DXThirdLoginManager : NSObject {
     
