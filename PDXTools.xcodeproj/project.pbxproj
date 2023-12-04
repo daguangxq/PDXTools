@@ -64,7 +64,7 @@
 		C4C01EF82B1DADA3000A6B60 /* PDXToolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDXToolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4C01F072B1DADE1000A6B60 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C4C01F092B1DAE44000A6B60 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		C4C01F0B2B1DB062000A6B60 /* PDXTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = PDXTools.podspec; sourceTree = SOURCE_ROOT; };
+		C4C01F0B2B1DB062000A6B60 /* PDXTools.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PDXTools.podspec; sourceTree = SOURCE_ROOT; };
 		D42B1D33AD16F8D98E7EA5B9 /* Pods-PDXTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXTools.release.xcconfig"; path = "Target Support Files/Pods-PDXTools/Pods-PDXTools.release.xcconfig"; sourceTree = "<group>"; };
 		F8F4EA647C436860CC39445C /* Pods-PDXTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXTools.debug.xcconfig"; path = "Target Support Files/Pods-PDXTools/Pods-PDXTools.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,8 +145,8 @@
 		C4C01ED42B1DADA2000A6B60 /* PDXTools */ = {
 			isa = PBXGroup;
 			children = (
+				C4C01F0E2B1DB7B7000A6B60 /* Classes */,
 				C4C01F0B2B1DB062000A6B60 /* PDXTools.podspec */,
-				C4C01F052B1DADAB000A6B60 /* Core */,
 				C4C01ED52B1DADA2000A6B60 /* AppDelegate.swift */,
 				C4C01ED72B1DADA2000A6B60 /* SceneDelegate.swift */,
 				C4C01ED92B1DADA2000A6B60 /* ViewController.swift */,
@@ -190,6 +190,22 @@
 				C4C01F072B1DADE1000A6B60 /* Data.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		C4C01F0D2B1DB751000A6B60 /* ThirdLogin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLogin;
+			sourceTree = "<group>";
+		};
+		C4C01F0E2B1DB7B7000A6B60 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C4C01F0D2B1DB751000A6B60 /* ThirdLogin */,
+				C4C01F052B1DADAB000A6B60 /* Core */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
