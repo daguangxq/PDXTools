@@ -7,8 +7,14 @@ Pod::Spec.new do |spec|
     spec.authors = { 'pdx' => 'daguangxq@icloud.com' }
     spec.source = { :git => 'https://github.com/daguangxq/PDXTools.git', :tag => spec.version }
     spec.platform     = :ios, '13.0'
-    spec.source_files = 'PDXTools/Classes/Core/**/*.swift'
-  
+    
+    # 常用核心功能
+    spec.subspec 'Core' do |subspec|
+        subspec.name = 'Core'
+        subspec.source_files = 'PDXTools/Classes/Core/**/*.swift'
+    end
+    
+    # 第三方登陆
     spec.subspec 'ThirdLogin' do |subspec|
         subspec.name = 'ThirdLogin'
         subspec.dependency 'WechatOpenSDK-XCFramework', '~> 2.0.2'
@@ -16,4 +22,6 @@ Pod::Spec.new do |spec|
         subspec.dependency 'FacebookLogin', '~> 0.9.0'
         subspec.source_files = 'PDXTools/Classes/ThirdLogin/*.swift'
     end
+    
+    spec.default_subspec = 'Core'
 end
