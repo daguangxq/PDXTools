@@ -182,6 +182,7 @@
 		C4C01F052B1DADAB000A6B60 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C4E0F7AB2B27F1A0009DC3BE /* Ble */,
 				C4C01F062B1DADB8000A6B60 /* Extension */,
 			);
 			path = Core;
@@ -211,6 +212,13 @@
 				C4C01F052B1DADAB000A6B60 /* Core */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		C4E0F7AB2B27F1A0009DC3BE /* Ble */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ble;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
