@@ -87,7 +87,6 @@ extension Date {
         
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = .init(secondsFromGMT: 0)
         formatter.dateFormat = formate
         
         if let futureDate = futureDate {
