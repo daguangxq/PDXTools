@@ -13,6 +13,8 @@ Pod::Spec.new do |spec|
         subspec.name = 'Core'
         subspec.source_files = 'PDXTools/Classes/Core/**/*.swift'
         #subspec.public_header_files = 'PDXTools/Classes/Core/**/*.swift'
+        subspec.dependency 'QMUIKit'
+        subspec.dependency 'Kingfisher'
     end
     
     # 第三方登陆

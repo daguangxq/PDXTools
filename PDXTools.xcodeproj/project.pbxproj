@@ -10,6 +10,10 @@
 		0C547929DB7C7A70D7F9E291 /* Pods_PDXTools_PDXToolsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596855C35102E46B1D0EBD73 /* Pods_PDXTools_PDXToolsUITests.framework */; };
 		0C88610B1314D404D2242A4A /* Pods_PDXTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94C677950B5A7A0F1337FF6 /* Pods_PDXTools.framework */; };
 		735832A093401643F2A5EF19 /* Pods_PDXToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43674CB8311C8A9A294A8B1B /* Pods_PDXToolsTests.framework */; };
+		C44F8E1D2B48F55D00C96498 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F8E1C2B48F55D00C96498 /* UIImageView.swift */; };
+		C44F8E1F2B48F75800C96498 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F8E1E2B48F75800C96498 /* String.swift */; };
+		C44F8E222B48F7CC00C96498 /* PDXHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F8E212B48F7CC00C96498 /* PDXHelper.swift */; };
+		C44F8E322B49010D00C96498 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F8E312B49010D00C96498 /* Dictionary.swift */; };
 		C4C01ED62B1DADA2000A6B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C01ED52B1DADA2000A6B60 /* AppDelegate.swift */; };
 		C4C01ED82B1DADA2000A6B60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C01ED72B1DADA2000A6B60 /* SceneDelegate.swift */; };
 		C4C01EDA2B1DADA2000A6B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C01ED92B1DADA2000A6B60 /* ViewController.swift */; };
@@ -50,6 +54,10 @@
 		860D6B75A102106EE3CB0E1A /* Pods-PDXToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-PDXToolsTests/Pods-PDXToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D8D468F6962B0B28826D81C /* Pods-PDXToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDXToolsTests.release.xcconfig"; path = "Target Support Files/Pods-PDXToolsTests/Pods-PDXToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A94C677950B5A7A0F1337FF6 /* Pods_PDXTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PDXTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44F8E1C2B48F55D00C96498 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		C44F8E1E2B48F75800C96498 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C44F8E212B48F7CC00C96498 /* PDXHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDXHelper.swift; sourceTree = "<group>"; };
+		C44F8E312B49010D00C96498 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		C4C01ED22B1DADA2000A6B60 /* PDXTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDXTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C01ED52B1DADA2000A6B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4C01ED72B1DADA2000A6B60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +131,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C44F8E202B48F79400C96498 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C44F8E212B48F7CC00C96498 /* PDXHelper.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		C4C01EC92B1DADA2000A6B60 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +200,7 @@
 			children = (
 				C4E0F7AB2B27F1A0009DC3BE /* Ble */,
 				C4C01F062B1DADB8000A6B60 /* Extension */,
+				C44F8E202B48F79400C96498 /* Tools */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -191,6 +208,9 @@
 		C4C01F062B1DADB8000A6B60 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C44F8E1C2B48F55D00C96498 /* UIImageView.swift */,
+				C44F8E312B49010D00C96498 /* Dictionary.swift */,
+				C44F8E1E2B48F75800C96498 /* String.swift */,
 				C4C01F092B1DAE44000A6B60 /* Date.swift */,
 				C4C01F072B1DADE1000A6B60 /* Data.swift */,
 			);
@@ -500,10 +520,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C01EDA2B1DADA2000A6B60 /* ViewController.swift in Sources */,
+				C44F8E322B49010D00C96498 /* Dictionary.swift in Sources */,
 				C4C01F0A2B1DAE45000A6B60 /* Date.swift in Sources */,
+				C44F8E1D2B48F55D00C96498 /* UIImageView.swift in Sources */,
 				C4C01ED62B1DADA2000A6B60 /* AppDelegate.swift in Sources */,
 				C4C01ED82B1DADA2000A6B60 /* SceneDelegate.swift in Sources */,
 				C4C01F082B1DADE2000A6B60 /* Data.swift in Sources */,
+				C44F8E222B48F7CC00C96498 /* PDXHelper.swift in Sources */,
+				C44F8E1F2B48F75800C96498 /* String.swift in Sources */,
 				C4C01F102B1DBB59000A6B60 /* DXThirdLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
