@@ -54,7 +54,7 @@ extension UIImageView {
     
     /// 图片下载，灰色占位图
     /// - Parameter url: 下载地址
-    public func sb_setImageURLWithGrayPlaceholder(with url:URL?) {
+    public func pdx_setImageURLWithGrayPlaceholder(with url:URL?) {
         guard let url = url else { return }
         
         let placeholder = UIImage.qmui_image(with: UIColor.qmui_color(withHexString: "#F2F2F2"))
@@ -63,7 +63,7 @@ extension UIImageView {
     
     /// 图片下载，菊花进度条
     /// - Parameter url: 下载地址
-    public func sb_setImageURLWithIndicator(with url:URL?) {
+    public func pdx_setImageURLWithIndicator(with url:URL?) {
         guard let url = url else { return }
         self.startIndicator()
         self.kf.setImage(with: url) {[weak self] (_) in
