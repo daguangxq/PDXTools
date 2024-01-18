@@ -16,22 +16,6 @@ public extension UIView {
         layer.shadowOpacity = 0.1
     }
     
-    /// 设置指定圆角
-    /// - Parameters:
-    ///   - rectCorners: 需要显示的圆角
-    ///   - cornerRadius: 圆角度数
-    func pdx_setRoundedCorners(rectCorners:UIRectCorner,cornerRadius:CGFloat) {
-        let maskPath = UIBezierPath(roundedRect: bounds,
-                                    byRoundingCorners: rectCorners,
-                                    cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
-        
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = maskPath.cgPath
-        
-        layer.mask = maskLayer
-    }
-    
-    
     /// 设置指定边框
     /// - Parameters:
     ///   - rectCorners: 需要设置的位置
