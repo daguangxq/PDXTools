@@ -12,7 +12,7 @@ import QMUIKit
 
 public extension UIBarButtonItem {
     
-    /// 创建三个首页的右上角通知标志
+    /// 创建右上角通知标志
     /// - Parameter imageName: 图标
     /// - Parameter sel: 跳转地址
     /// - Returns:UIBarButtonItem
