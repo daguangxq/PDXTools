@@ -61,13 +61,19 @@ extension UIImageView {
         self.kf.setImage(with: url,placeholder: placeholder)
     }
     
+    
     /// 图片下载，菊花进度条
-    /// - Parameter url: 下载地址
-    public func pdx_setImageURLWithIndicator(with url:URL?) {
+    /// - Parameters:
+    ///   - url: url
+    ///   - completed: 完成回调
+    public func pdx_setImageURLWithIndicator(with url:URL?,_ completed: (()->())? = nil) {
         guard let url = url else { return }
         self.startIndicator()
         self.kf.setImage(with: url) {[weak self] (_) in
             self?.stopIndicator()
+            if let block = completed {
+                block();
+            }
         }
     }
 }
