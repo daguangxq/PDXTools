@@ -117,3 +117,21 @@ extension Date {
         return startOfYear
     }
 }
+
+
+extension Date {
+    
+    /// 根据时间戳转换为指定格式的日期字符串
+    /// - Parameters:
+    ///   - timestamp: 时间戳，表示从 1970 年 1 月 1 日 00:00:00 UTC 到指定时间的秒数
+    ///   - formatter: 日期格式字符串，用于格式化日期，例如："yyyy-MM-dd HH:mm:ss"
+    /// - Returns: 格式化后的日期字符串
+    public static func formatDateFromTimestamp(_ timestamp: TimeInterval,formatter:String) -> String {
+        let date = Date(timeIntervalSince1970: timestamp)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = formatter
+        
+        return dateFormatter.string(from: date)
+    }
+}

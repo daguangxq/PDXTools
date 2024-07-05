@@ -19,6 +19,29 @@ public extension String {
         return digest.reduce("") { $0 + String(format:"%02x", $1) }
     }
     
+    /// md5加密，16长度，小写。
+    /// - Returns: <#description#>
+    public func md5_lower_16() -> String {
+        let length = Int(CC_MD5_DIGEST_LENGTH)
+        var digest = [UInt8](repeating: 0, count: length)
+        
+        if let data = self.data(using: String.Encoding.utf8) {
+            _ = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) in
+                CC_MD5(bytes.baseAddress, CC_LONG(data.count), &digest)
+            }
+        }
+        
+        // 将哈希值转为字符串
+        let md5String = digest.reduce("") { (str, byte) -> String in
+            return str + String(format: "%02x", byte)
+        }
+        
+        // 返回16位MD5值（从第8位开始，截取16位）
+        let startIndex = md5String.index(md5String.startIndex, offsetBy: 8)
+        let endIndex = md5String.index(startIndex, offsetBy: 16)
+        return String(md5String[startIndex..<endIndex])
+    }
+    
     /// 截取字符串
     /// - Parameters:
     ///   - index: 下标
